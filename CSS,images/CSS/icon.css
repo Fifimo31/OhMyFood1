@@ -54,3 +54,11 @@
     font: var(--fa-font-solid);
     content: "\f3c5";   
 }
+.utensils::before {
+    font: var(--fa-font-solid);
+    content: "\f2e7";
+}
+.handshake-angle::before {
+    font: var(--fa-font-solid);
+    content: "\f4c4"
+}
