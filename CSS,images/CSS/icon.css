@@ -1,0 +1,56 @@
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.money::before {
+    font: var(--fa-font-solid);
+    content: "\f53a";
+    color: var(--blue-color);
+       
+}
+.person::before {
+    font: var(--fa-font-solid);
+    content: "\f183";
+    color: var(--blue-color);
+       
+}
+.heart::before {
+    font: var(--fa-font-solid);
+    content: "\f004";
+    color: var(--blue-color);
+       
+}
+.dog::before {
+    font: var(--fa-font-solid);
+    content: "\f6d3";
+    color: var(--blue-color);
+       
+}
+.info::before {
+    font: var(--fa-font-solid);
+    content: "\f129";
+    color: var(--blue-color);  
+}
+.star::before {
+    font: var(--fa-font-solid);
+    content: "\f005";
+    color: var(--blue-color);
+    width: 12px;
+    height: 12px;
+}
+.starGrey::before {
+    font: var(--fa-font-solid);
+    content: "\f005";
+    color: var(--grey-color);
+}
+.chart::after {
+    font: var(--fa-font-solid);
+    content: "\f201";
+    color: var(--blue-color);
+    margin-right: 20px;
+}
+.Emplacement::before {
+    font: var(--fa-font-solid);
+    content: "\f3c5";   
+}
