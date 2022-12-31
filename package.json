@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood1",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./CSS,image/CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fifimo31/OhMyFood1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fifimo31/OhMyFood1/issues"
+  },
+  "homepage": "https://github.com/Fifimo31/OhMyFood1#readme"
+}
