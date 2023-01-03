@@ -1,7 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Roboto+Condensed:wght@300&display=swap');
 $primaire-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+$gray-color: #EAEAEA;
+$dark-gray-color: #80808036;
+$light-gray-color: #F7F7F7;
+$white-color: white;
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    
+}
 .container {
     width: 375px;
     margin: auto;
+}
+header {
+    .logo {
+        display: flex;
+        justify-content: center;
+        height: 63px;
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+    img {
+        width: 162px;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        background-color: $gray-color;
+        height: 50px;
+        box-shadow: inset 0 3px 3px $dark-gray-color;
+        input {
+            border: none;
+            text-align: center;
+            background-color: $gray-color;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: inset 0 3px 1px $dark-gray-color;
+        }
+    }
+    .Texte {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        height: 320px;
+        background-color: $light-gray-color;
+        h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+        width: 300px;
+        padding-left: 54px;
+        }
+        p {
+            text-align: center;
+            padding-right: 5px;
+            font-size: 18px;
+        }
+    }
+    .ButtonCenter {
+        display: flex;
+        justify-content: center;
+    }
+    .Button {
+        margin: 50px 0px;
+        color: $white-color;
+        background: linear-gradient(to left, $primaire-color, $secondary-color);
+        border-radius: 25px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        height: 50px;
+        width: 218px;
+    }
+    .FonctionSize {
+        height: 440px;
+        h2 {
+            padding: 50px 0 20px 20px;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            li {
+                color: black;
+                background: $light-gray-color;
+                border-radius: 15px;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                height: 70px;
+                width: 320px;
+                margin: 20px;
+            }
+        }
+    }
 }

@@ -52,7 +52,9 @@
 }
 .Emplacement::before {
     font: var(--fa-font-solid);
-    content: "\f3c5";   
+    content: "\f3c5";
+    display: flex;
+    align-items: center;   
 }
 .utensils::before {
     font: var(--fa-font-solid);
@@ -61,4 +63,22 @@
 .handshake-angle::before {
     font: var(--fa-font-solid);
     content: "\f4c4"
+}
+.mobile-screen-button::before {
+    font: var(--fa-font-solid);
+    content: "\f3cd";
+    margin: 20px;
+    color: #3a3636ab;
+}
+.list-ul::before {
+    font: var(--fa-font-solid);
+    content: "\f0ca";
+    margin: 30px;
+    color: #3a3636ab;
+}
+.store::before {
+    font: var(--fa-font-solid);
+    content: "\f54e";
+    margin: 20px;
+    color: #3a3636ab;
 }
