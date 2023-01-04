@@ -29,7 +29,6 @@
     content: "\f004";
     color: transparent;
     background-image: linear-gradient(to left, #9356DC, #ff79da);
-    -webkit-background-clip: text;
     position: relative;
     left: 255px;
     bottom: 40px;
