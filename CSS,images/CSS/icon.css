@@ -15,11 +15,13 @@
     color: var(--blue-color);
        
 }
-.heart::before {
+.heart::after {
     font: var(--fa-font-solid);
     content: "\f004";
     color: var(--blue-color);
-       
+    position: relative;
+    left: 290px;
+    bottom: 40px; 
 }
 .dog::before {
     font: var(--fa-font-solid);
