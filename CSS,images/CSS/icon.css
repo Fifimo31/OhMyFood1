@@ -16,12 +16,28 @@
        
 }
 .heart::after {
-    font: var(--fa-font-solid);
+    font: var(--fa-font-regular);
     content: "\f004";
     color: var(--blue-color);
     position: relative;
     left: 290px;
-    bottom: 40px; 
+    bottom: 40px;
+    font-size: 30px; 
+}
+.heart1::after {
+    font: var(--fa-font-solid);
+    content: "\f004";
+    color: transparent;
+    background-image: linear-gradient(to left, #9356DC, #ff79da);
+    -webkit-background-clip: text;
+    position: relative;
+    left: 255px;
+    bottom: 40px;
+    font-size: 30px;
+    opacity: 0;
+}
+.heart1:hover {
+    opacity: 1;
 }
 .dog::before {
     font: var(--fa-font-solid);

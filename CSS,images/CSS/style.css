@@ -119,12 +119,13 @@ header .FonctionSize ul p {
   padding-left: 5px;
   padding-top: 2px;
 }
-header .FonctionSize ul li:hover {
+header .FonctionSize ul:hover {
   background-color: #F5EDFF;
 }
 
 main {
   background-color: #F7F7F7;
+  height: 1370px;
 }
 main h2 {
   padding: 60px 0 40px 20px;
@@ -147,6 +148,17 @@ main article h3 {
 }
 main article p {
   margin: 0 0 0 15px;
+}
+main article:hover .heart1 {
+  opacity: 1;
+}
+main .imageMargin {
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+
+footer img {
+  width: 138px;
 }
 
 /*# sourceMappingURL=style.css.map */

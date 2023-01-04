@@ -123,7 +123,7 @@ header {
                 padding-left: 5px;
                 padding-top: 2px;
             }
-            li:hover {
+            &:hover {
                 background-color: $light-purple;
             }
         }
@@ -131,6 +131,7 @@ header {
 }
 main {
     background-color: $light-gray-color;
+    height: 1370px;
     h2 {
         padding: 60px 0 40px 20px;
     }
@@ -152,5 +153,17 @@ main {
         p {
             margin: 0 0 0 15px;
         }
+        &:hover .heart1 {
+            opacity: 1;
+        }
+    }
+    .imageMargin {
+        margin-bottom: 0;
+        padding-bottom: 30px;
+    }
+}
+footer {
+    img{
+        width: 138px;
     }
 }
