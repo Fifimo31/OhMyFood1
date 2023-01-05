@@ -15,28 +15,19 @@
     color: var(--blue-color);
        
 }
-.heart::after {
-    font: var(--fa-font-regular);
-    content: "\f004";
-    color: var(--blue-color);
-    position: relative;
-    left: 290px;
-    bottom: 40px;
-    font-size: 30px; 
-}
-.heart1::after {
+.heart i::after {
     font: var(--fa-font-solid);
     content: "\f004";
     color: transparent;
-    background-image: linear-gradient(to left, #9356DC, #ff79da);
-    position: relative;
-    left: 255px;
-    bottom: 40px;
+    background-image: linear-gradient(to left, #9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
     font-size: 30px;
     opacity: 0;
-}
-.heart1:hover {
-    opacity: 1;
+    height: 0%;
+    transition: all .5s;
+    position: relative;
+    right: 28px;
 }
 .dog::before {
     font: var(--fa-font-solid);
