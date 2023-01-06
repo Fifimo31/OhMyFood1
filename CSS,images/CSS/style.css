@@ -162,6 +162,18 @@ main article .heart:hover i::after {
   opacity: 1;
   height: 100%;
 }
+main article .new {
+  position: absolute;
+  width: 80px;
+  height: 29px;
+  background-color: #99E2D0;
+  color: #008766;
+  left: 235px;
+  top: 35px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
 
 footer {
   height: 197px;

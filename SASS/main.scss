@@ -8,13 +8,14 @@ $light-gray-color: #F7F7F7;
 $white-color: white;
 $light-purple: #F5EDFF;
 $black-color: #353535;
+$green-color: #008766;
 *{
     margin: 0;
     padding: 0;
     list-style-type: none;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
-}
+} 
 a {
     text-decoration: none;
     color: black;
@@ -167,6 +168,18 @@ main {
                 opacity: 1;
                 height: 100%;
             }   
+        }
+        .new {
+            position: absolute;
+            width: 80px;
+            height: 29px;
+            background-color: $tertiary-color;
+            color: $green-color;
+            left: 235px;
+            top: 35px;
+            text-align: center;
+            display: grid;
+            place-items: center;
         }
     }
 }
