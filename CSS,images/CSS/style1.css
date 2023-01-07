@@ -1,3 +1,21 @@
 header img {
     width: 162px;
   }
+.heart::after {
+  font: var(--fa-font-regular);
+  content: "\f004";
+  color: black;
+  }
+.arrow-left::before {
+  font: var(--fa-font-solid);
+  content: "\f060";
+  color: black;
+  }
+.utensils::before {
+  font: var(--fa-font-solid);
+  content: "\f2e7";
+}
+.handshake-angle::before {
+  font: var(--fa-font-solid);
+  content: "\f4c4";
+}

@@ -70,7 +70,7 @@
 }
 .handshake-angle::before {
     font: var(--fa-font-solid);
-    content: "\f4c4"
+    content: "\f4c4";
 }
 .mobile-screen-button::before {
     font: var(--fa-font-solid);
