@@ -1,21 +1,66 @@
-header img {
-    width: 162px;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Roboto+Condensed:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  width: 375px;
+  margin: auto;
+}
+
 .heart::after {
   font: var(--fa-font-regular);
   content: "\f004";
   color: black;
-  }
+}
+
 .arrow-left::before {
   font: var(--fa-font-solid);
   content: "\f060";
   color: black;
-  }
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-right: 85px;
+}
+
 .utensils::before {
   font: var(--fa-font-solid);
   content: "\f2e7";
 }
+
 .handshake-angle::before {
   font: var(--fa-font-solid);
   content: "\f4c4";
 }
+
+header .logo {
+  display: flex;
+  justify-content: center;
+  height: 63px;
+  margin-right: 80px;
+}
+header .logo a {
+  display: flex;
+  align-items: center;
+}
+header img {
+  width: 162px;
+}
+
+main img {
+  width: 375px;
+  height: 275px;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style1.css.map */
