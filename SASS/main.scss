@@ -196,6 +196,10 @@ footer {
         padding-left: 20px;
         li {
             padding-bottom: 10px;
+            a {
+                color: $white-color;
+            }  
         }
+        
     }
 }

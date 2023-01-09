@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Roboto+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Shrikhand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,12 +15,14 @@ a {
 .container {
   width: 375px;
   margin: auto;
+  position: relative;
 }
 
 .heart::after {
   font: var(--fa-font-regular);
   content: "\f004";
   color: black;
+  margin-left: 30px;
 }
 
 .arrow-left::before {
@@ -53,14 +55,74 @@ header .logo a {
   display: flex;
   align-items: center;
 }
-header img {
+header .logo1 {
   width: 162px;
 }
-
-main img {
+header .image {
   width: 375px;
   height: 275px;
   object-fit: cover;
+}
+
+main {
+  height: 1517px;
+  background: #F7F7F7;
+  position: absolute;
+  top: 295px;
+  border-radius: 40px 40px 0 0;
+  width: 375px;
+}
+main h1 {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 30px 0 30px 20px;
+}
+main h2 {
+  font-size: 18px;
+}
+main .titre {
+  margin: 20px 10px;
+}
+main .liste {
+  background-color: white;
+  width: 350px;
+  height: 70px;
+  border-radius: 15px;
+  margin: 20px;
+}
+main article {
+  margin-top: 50px;
+}
+
+footer {
+  position: absolute;
+  top: 1580px;
+  height: 197px;
+  background-color: #353535;
+  width: 375px;
+}
+footer img {
+  width: 138px;
+  padding: 30px 0 20px 20px;
+  color: white;
+}
+footer nav {
+  color: white;
+  padding-left: 20px;
+}
+footer nav li {
+  padding-bottom: 10px;
+}
+footer nav li a {
+  color: white;
+}
+footer nav li .lien1 {
+  margin-left: 10px;
+}
+footer nav li .lien2 {
+  margin-left: 5px;
 }
 
 /*# sourceMappingURL=style1.css.map */
