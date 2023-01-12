@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Roboto+Condensed:wght@300&display=swap');
-$primaire-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$gray-color: #EAEAEA;
-$dark-gray-color: #80808036;
-$light-gray-color: #F7F7F7;
-$white-color: white;
-$light-purple: #F5EDFF;
-$black-color: #353535;
-$green-color: #008766;
+@use 'var' as v;
 *{
     margin: 0;
     padding: 0;
@@ -40,16 +31,16 @@ header {
     form {
         display: flex;
         justify-content: center;
-        background-color: $gray-color;
+        background-color: v.$gray-color;
         height: 50px;
-        box-shadow: inset 0 3px 3px $dark-gray-color;
+        box-shadow: inset 0 3px 3px v.$dark-gray-color;
         input {
             border: none;
             text-align: center;
-            background-color: $gray-color;
+            background-color: v.$gray-color;
             font-size: 16px;
             font-weight: bold;
-            box-shadow: inset 0 3px 1px $dark-gray-color;
+            box-shadow: inset 0 3px 1px v.$dark-gray-color;
         }
     }
     .Texte {
@@ -57,7 +48,7 @@ header {
         flex-direction: column;
         padding-top: 50px;
         height: 320px;
-        background-color: $light-gray-color;
+        background-color: v.$light-gray-color;
         h1 {
         font-size: 24px;
         text-align: center;
@@ -77,8 +68,8 @@ header {
     }
     .Button {
         margin: 50px 0px;
-        color: $white-color;
-        background: linear-gradient(to left, $primaire-color, $secondary-color);
+        color: v.$white-color;
+        background: linear-gradient(to left, v.$primaire-color, v.$secondary-color);
         border-radius: 25px;
         font-size: 16px;
         display: flex;
@@ -99,7 +90,7 @@ header {
             flex-direction: column;
             li {
                 color: black;
-                background: $light-gray-color;
+                background: v.$light-gray-color;
                 border-radius: 15px;
                 font-size: 16px;
                 display: flex;
@@ -116,24 +107,24 @@ header {
                 position: relative;
                 top: 48px;
                 left: 10px;
-                color: $white-color;
-                background-color: $primaire-color;
+                color: v.$white-color;
+                background-color: v.$primaire-color;
                 width: 25px;
                 height: 25px;
-                border: 2px solid $primaire-color;
+                border: 2px solid v.$primaire-color;
                 border-radius: 25px;
                 margin: 0 30px 0 0;
                 padding-left: 5px;
                 padding-top: 2px;
             }
             li:hover {
-                background-color: $light-purple;
+                background-color: v.$light-purple;
             }
         }
     }
 }
 main {
-    background-color: $light-gray-color;
+    background-color: v.$light-gray-color;
     height: 1370px;
     h2 {
         padding: 60px 0 40px 20px;
@@ -143,7 +134,7 @@ main {
         height: 251px;
         border-radius: 15px;
         margin: 20px 20px 50px 20px;
-        background-color: $white-color;
+        background-color: v.$white-color;
         position: relative;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         img {
@@ -175,8 +166,8 @@ main {
             position: absolute;
             width: 80px;
             height: 29px;
-            background-color: $tertiary-color;
-            color: $green-color;
+            background-color: v.$tertiary-color;
+            color: v.$green-color;
             left: 235px;
             top: 35px;
             text-align: center;
@@ -187,18 +178,18 @@ main {
 }
 footer {
     height: 197px;
-    background-color: $black-color;
+    background-color: v.$black-color;
     img{
         width: 138px;
         padding: 30px 0 20px 20px;
     }
     nav {
-        color: $white-color;
+        color: v.$white-color;
         padding-left: 20px;
         li {
             padding-bottom: 10px;
             a {
-                color: $white-color;
+                color: v.$white-color;
             }
             .lien1 {
                 margin-left: 10px;
