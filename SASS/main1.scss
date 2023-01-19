@@ -17,27 +17,15 @@ a {
     margin: auto;
     position: relative;
 }
-.heart::after {
-    font: var(--fa-font-regular);
-    content: "\f004";
-    color: black;
-    margin-left: 30px;
+
+    .check1 {
+        font: var(--fa-font-regular);
+        content: "\f058";
+        color: #99E2D0;
+        width: 20px;
+        height: 20px;
+        background: white;
     }
-.heart1::after {
-    font: var(--fa-font-regular);
-    content: "\f004";
-    color: black;
-    margin-left: 85px;
-    }
-/*.check1::after {
-    font: var(--fa-font-regular);
-    content: "\f058";
-    color: v.$tertiary-color;
-    margin-left: 30px;
-    position: absolute;
-    bottom: 25px;
-    left: 295px;
-    }*/
 .arrow-left::before {
     font: var(--fa-font-solid);
     content: "\f060";
@@ -45,29 +33,50 @@ a {
     font-size: 20px;
     display: flex;
     align-items: center;
-    margin-right: 85px;
+    margin-right: 50px;
     }
 .utensils::before {
     font: var(--fa-font-solid);
     content: "\f2e7";
     }
-  .handshake-angle::before {
+.handshake-angle::before {
     font: var(--fa-font-solid);
     content: "\f4c4";
   }
+@keyframes repas {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes anim-check {
+    0% {
+        right: -70px;
+    }
+    100% {
+        right: 0;
+    }
+}
 header {
     .logo {
         display: flex;
         justify-content: center;
         height: 63px;
-        margin-right: 80px;
         a {
             display: flex;
             align-items: center;
         }
     }
-    .logo1 {
+    h1 {
+        font-family: Shrikhand, sans-serif;
         width: 162px;
+    }
+    .logo1 {
+        margin-right: 100px;
     }
     .image {
         width: 375px;
@@ -81,7 +90,20 @@ main {
     position: absolute;
     top: 295px;
     border-radius: 40px 40px 0 0;
-    width: 375px; 
+    width: 375px;
+    .positionHeart {
+        position: relative;
+        .heart {
+            position: absolute;
+            bottom: 2px;
+            right: -9px;
+            font-size: 28px;
+            &:hover i::after{
+                opacity: 1;
+                height: 100%;
+            }   
+        } 
+    } 
     h1 {
         font-family: Shrikhand;
         font-size: 28px;
@@ -92,11 +114,13 @@ main {
     h2 {
         font-size: 18px;
     }
+    
     .titre {
         margin: 20px;
         border-bottom: 4px solid v.$tertiary-color;
         width: 45px;
         padding-bottom: 10px;
+       
     }
     .liste {
         background-color: v.$white-color;
@@ -104,28 +128,55 @@ main {
         height: 70px;
         border-radius: 15px;
         margin: 20px;
-        position: relative;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        strong {
-            position: absolute;
-            bottom: 25px;
-            left: 295px;
+        animation: repas 1s;
+        animation-fill-mode: both;
+        display: flex;
+        justify-content: space-between;
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation-delay: 150ms *
+                $i;
+            }
         }
-        h2 {
-            padding: 15px 0 5px 10px;
+        .liste-text {
+            h2 {
+                padding: 15px 0 5px 10px;
+            }
+            p {
+                padding-left: 10px;
+            }
         }
-        p {
-            padding-left: 10px;
+        .liste-PriceCheck {
+            display: flex;
+            align-items: center;
+            .liste-PriceCheck__price {
+                strong {
+                    margin-right: 20px;
+                }
+            }
+            .liste-PriceCheck__check {
+                width: 70px;
+                height: 70px;
+                background: v.$tertiary-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0 10px 10px 0;
+                margin-right: -70px;
+                [class*=check] {
+                    color: #fff;
+                    background: v.$tertiary-color;
+                    font-size: 2em;
+                }
+                &:hover .liste-PriceCheck__check {
+                    animation: anim-check .7s;
+                    margin-right: 0;
+                }
+            }
         }
-        .liste-check {
-            width: 70px;
-            height: 70px;
-            background: v.$tertiary-color;
-            position: absolute;
-            bottom: 0px;
-            left: 320px;  
-        }
+        
     }
     article {
         margin-top: 50px;
@@ -147,6 +198,13 @@ main {
         height: 50px;
         width: 218px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 400ms;
+        &:hover {
+            transform: scale(1.15);
+            opacity: 0.9;
+        }
     }
 }
 .heightMain {
@@ -155,13 +213,14 @@ main {
 footer {
     position: absolute;
     top: 1580px;
-    height: 197px;
+    height: 210px;
     background-color: v.$black-color;
     width: 375px;
-    img{
+    h1 {
         width: 138px;
         padding: 30px 0 20px 20px;
         color: v.$white-color;
+        font-family: Shrikhand, sans-serif;
     }
     nav {
         color: v.$white-color;
@@ -214,20 +273,24 @@ footer {
         flex-direction: column;
         align-items: center;
         height: 1450px;
+        .positionHeart {
+            .heart {
+                bottom: 30px;
+                right: -85px;   
+            } 
+        }
+        
         article {
             width: 60%;
             .liste {
                 width: auto;
-                overflow: hidden;
-                strong {
-                    left: 90%;
-                }
-                .liste-check {
-                    left: 100%;
-                    
-                }
-                &:hover .liste-check {
-                    left: 90%;
+                .liste-PriceCheck{
+                    .liste-PriceCheck__check {
+                        &:hover .liste-PriceCheck__check {
+                            animation: anim-check .7s;
+                            margin-right: 0;
+                        }
+                    }
                 }
             }
         }

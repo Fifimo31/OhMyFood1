@@ -18,29 +18,15 @@ a {
   position: relative;
 }
 
-.heart::after {
+.check1 {
   font: var(--fa-font-regular);
-  content: "\f004";
-  color: black;
-  margin-left: 30px;
+  content: "\f058";
+  color: #99E2D0;
+  width: 20px;
+  height: 20px;
+  background: white;
 }
 
-.heart1::after {
-  font: var(--fa-font-regular);
-  content: "\f004";
-  color: black;
-  margin-left: 85px;
-}
-
-/*.check1::after {
-    font: var(--fa-font-regular);
-    content: "\f058";
-    color: v.$tertiary-color;
-    margin-left: 30px;
-    position: absolute;
-    bottom: 25px;
-    left: 295px;
-    }*/
 .arrow-left::before {
   font: var(--fa-font-solid);
   content: "\f060";
@@ -48,7 +34,7 @@ a {
   font-size: 20px;
   display: flex;
   align-items: center;
-  margin-right: 85px;
+  margin-right: 50px;
 }
 
 .utensils::before {
@@ -61,18 +47,39 @@ a {
   content: "\f4c4";
 }
 
+@keyframes repas {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes anim-check {
+  0% {
+    right: -70px;
+  }
+  100% {
+    right: 0;
+  }
+}
 header .logo {
   display: flex;
   justify-content: center;
   height: 63px;
-  margin-right: 80px;
 }
 header .logo a {
   display: flex;
   align-items: center;
 }
-header .logo1 {
+header h1 {
+  font-family: Shrikhand, sans-serif;
   width: 162px;
+}
+header .logo1 {
+  margin-right: 100px;
 }
 header .image {
   width: 375px;
@@ -87,6 +94,19 @@ main {
   top: 295px;
   border-radius: 40px 40px 0 0;
   width: 375px;
+}
+main .positionHeart {
+  position: relative;
+}
+main .positionHeart .heart {
+  position: absolute;
+  bottom: 2px;
+  right: -9px;
+  font-size: 28px;
+}
+main .positionHeart .heart:hover i::after {
+  opacity: 1;
+  height: 100%;
 }
 main h1 {
   font-family: Shrikhand;
@@ -110,28 +130,53 @@ main .liste {
   height: 70px;
   border-radius: 15px;
   margin: 20px;
-  position: relative;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  animation: repas 1s;
+  animation-fill-mode: both;
+  display: flex;
+  justify-content: space-between;
 }
-main .liste strong {
-  position: absolute;
-  bottom: 25px;
-  left: 295px;
+main .liste:nth-child(1) {
+  animation-delay: 150ms;
 }
-main .liste h2 {
+main .liste:nth-child(2) {
+  animation-delay: 300ms;
+}
+main .liste:nth-child(3) {
+  animation-delay: 450ms;
+}
+main .liste .liste-text h2 {
   padding: 15px 0 5px 10px;
 }
-main .liste p {
+main .liste .liste-text p {
   padding-left: 10px;
 }
-main .liste .liste-check {
+main .liste .liste-PriceCheck {
+  display: flex;
+  align-items: center;
+}
+main .liste .liste-PriceCheck .liste-PriceCheck__price strong {
+  margin-right: 20px;
+}
+main .liste .liste-PriceCheck .liste-PriceCheck__check {
   width: 70px;
   height: 70px;
   background: #99E2D0;
-  position: absolute;
-  bottom: 0px;
-  left: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+  margin-right: -70px;
+}
+main .liste .liste-PriceCheck .liste-PriceCheck__check [class*=check] {
+  color: #fff;
+  background: #99E2D0;
+  font-size: 2em;
+}
+main .liste .liste-PriceCheck .liste-PriceCheck__check:hover .liste-PriceCheck__check {
+  animation: anim-check 0.7s;
+  margin-right: 0;
 }
 main article {
   margin-top: 50px;
@@ -153,6 +198,13 @@ main .Button {
   height: 50px;
   width: 218px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+main .Button:hover {
+  transform: scale(1.15);
+  opacity: 0.9;
 }
 
 .heightMain {
@@ -162,14 +214,15 @@ main .Button {
 footer {
   position: absolute;
   top: 1580px;
-  height: 197px;
+  height: 210px;
   background-color: #353535;
   width: 375px;
 }
-footer img {
+footer h1 {
   width: 138px;
   padding: 30px 0 20px 20px;
   color: white;
+  font-family: Shrikhand, sans-serif;
 }
 footer nav {
   color: white;
@@ -223,21 +276,19 @@ footer nav li .lien2 {
     align-items: center;
     height: 1450px;
   }
+  main .positionHeart .heart {
+    bottom: 30px;
+    right: -85px;
+  }
   main article {
     width: 60%;
   }
   main article .liste {
     width: auto;
-    overflow: hidden;
   }
-  main article .liste strong {
-    left: 90%;
-  }
-  main article .liste .liste-check {
-    left: 100%;
-  }
-  main article .liste:hover .liste-check {
-    left: 90%;
+  main article .liste .liste-PriceCheck .liste-PriceCheck__check:hover .liste-PriceCheck__check {
+    animation: anim-check 0.7s;
+    margin-right: 0;
   }
   .heightMain {
     height: 1505px;
