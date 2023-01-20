@@ -53,14 +53,7 @@ a {
         opacity: 1;
     }
 }
-@keyframes anim-check {
-    0% {
-        right: -70px;
-    }
-    100% {
-        right: 0;
-    }
-}
+
 header {
     .logo {
         display: flex;
@@ -97,13 +90,14 @@ main {
             position: absolute;
             bottom: 2px;
             right: -9px;
-            font-size: 28px;
-            &:hover i::after{
-                opacity: 1;
-                height: 100%;
-            }   
-        } 
+            font-size: 28px;  
+        }
+        &:hover i::after{
+            opacity: 1;
+            height: 100%;
+        }    
     } 
+    
     h1 {
         font-family: Shrikhand;
         font-size: 28px;
@@ -143,9 +137,17 @@ main {
         .liste-text {
             h2 {
                 padding: 15px 0 5px 10px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 240px;
             }
             p {
                 padding-left: 10px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 240px;
             }
         }
         .liste-PriceCheck {
@@ -153,7 +155,7 @@ main {
             align-items: center;
             .liste-PriceCheck__price {
                 strong {
-                    margin-right: 20px;
+                    margin-right: 10px;
                 }
             }
             .liste-PriceCheck__check {
@@ -165,19 +167,17 @@ main {
                 align-items: center;
                 border-radius: 0 10px 10px 0;
                 margin-right: -70px;
+                transition: all 1s;
                 [class*=check] {
                     color: #fff;
                     background: v.$tertiary-color;
                     font-size: 2em;
-                }
-                
-            }
-            &:hover .liste-PriceCheck__check {
-                animation: anim-check .7s;
-                margin-right: 0;
+                }  
             }
         }
-        
+        &:hover .liste-PriceCheck__check {
+            margin-right: 0;
+        }
     }
     article {
         margin-top: 50px;
@@ -280,15 +280,18 @@ footer {
                 right: -85px;   
             } 
         }
-        
         article {
             width: 60%;
             .liste {
                 width: auto;
+                .liste-text{
+                    h2, p {
+                    width: auto;
+                    }
+                }
                 &:hover .liste-PriceCheck__check {
-                    animation: anim-check .7s;
                     margin-right: 0;
-                }               
+                }              
             }
         }
     }

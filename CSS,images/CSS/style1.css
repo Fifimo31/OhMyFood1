@@ -57,14 +57,6 @@ a {
     opacity: 1;
   }
 }
-@keyframes anim-check {
-  0% {
-    right: -70px;
-  }
-  100% {
-    right: 0;
-  }
-}
 header .logo {
   display: flex;
   justify-content: center;
@@ -104,7 +96,7 @@ main .positionHeart .heart {
   right: -9px;
   font-size: 28px;
 }
-main .positionHeart .heart:hover i::after {
+main .positionHeart:hover i::after {
   opacity: 1;
   height: 100%;
 }
@@ -148,16 +140,24 @@ main .liste:nth-child(3) {
 }
 main .liste .liste-text h2 {
   padding: 15px 0 5px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 240px;
 }
 main .liste .liste-text p {
   padding-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 240px;
 }
 main .liste .liste-PriceCheck {
   display: flex;
   align-items: center;
 }
 main .liste .liste-PriceCheck .liste-PriceCheck__price strong {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 main .liste .liste-PriceCheck .liste-PriceCheck__check {
   width: 70px;
@@ -168,14 +168,14 @@ main .liste .liste-PriceCheck .liste-PriceCheck__check {
   align-items: center;
   border-radius: 0 10px 10px 0;
   margin-right: -70px;
+  transition: all 1s;
 }
 main .liste .liste-PriceCheck .liste-PriceCheck__check [class*=check] {
   color: #fff;
   background: #99E2D0;
   font-size: 2em;
 }
-main .liste .liste-PriceCheck:hover .liste-PriceCheck__check {
-  animation: anim-check 0.7s;
+main .liste:hover .liste-PriceCheck__check {
   margin-right: 0;
 }
 main article {
@@ -286,8 +286,10 @@ footer nav li .lien2 {
   main article .liste {
     width: auto;
   }
+  main article .liste .liste-text h2, main article .liste .liste-text p {
+    width: auto;
+  }
   main article .liste:hover .liste-PriceCheck__check {
-    animation: anim-check 0.7s;
     margin-right: 0;
   }
   .heightMain {
