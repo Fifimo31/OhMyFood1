@@ -174,7 +174,7 @@ main .liste .liste-PriceCheck .liste-PriceCheck__check [class*=check] {
   background: #99E2D0;
   font-size: 2em;
 }
-main .liste .liste-PriceCheck .liste-PriceCheck__check:hover .liste-PriceCheck__check {
+main .liste .liste-PriceCheck:hover .liste-PriceCheck__check {
   animation: anim-check 0.7s;
   margin-right: 0;
 }
@@ -286,7 +286,7 @@ footer nav li .lien2 {
   main article .liste {
     width: auto;
   }
-  main article .liste .liste-PriceCheck .liste-PriceCheck__check:hover .liste-PriceCheck__check {
+  main article .liste:hover .liste-PriceCheck__check {
     animation: anim-check 0.7s;
     margin-right: 0;
   }

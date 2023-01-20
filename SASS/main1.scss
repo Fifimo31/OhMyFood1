@@ -170,10 +170,11 @@ main {
                     background: v.$tertiary-color;
                     font-size: 2em;
                 }
-                &:hover .liste-PriceCheck__check {
-                    animation: anim-check .7s;
-                    margin-right: 0;
-                }
+                
+            }
+            &:hover .liste-PriceCheck__check {
+                animation: anim-check .7s;
+                margin-right: 0;
             }
         }
         
@@ -284,14 +285,10 @@ footer {
             width: 60%;
             .liste {
                 width: auto;
-                .liste-PriceCheck{
-                    .liste-PriceCheck__check {
-                        &:hover .liste-PriceCheck__check {
-                            animation: anim-check .7s;
-                            margin-right: 0;
-                        }
-                    }
-                }
+                &:hover .liste-PriceCheck__check {
+                    animation: anim-check .7s;
+                    margin-right: 0;
+                }               
             }
         }
     }
