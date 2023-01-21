@@ -35,6 +35,59 @@ header .logo1 {
   margin-right: 100px;
 }
 
+@keyframes repas {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes chargeur {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(1080deg) scale(0);
+  }
+}
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+footer {
+  height: 210px;
+  background-color: #353535;
+}
+footer h1 {
+  width: 138px;
+  padding: 30px 0 20px 20px;
+  font-family: Shrikhand, sans-serif;
+  color: white;
+}
+footer nav {
+  color: white;
+  padding-left: 20px;
+}
+footer nav li {
+  padding-bottom: 10px;
+}
+footer nav li a {
+  color: white;
+}
+footer nav li .lien1 {
+  margin-left: 10px;
+}
+footer nav li .lien2 {
+  margin-left: 5px;
+}
+
 .loader {
   background-color: white;
   height: 100vh;
@@ -55,42 +108,10 @@ header .logo1 {
   border-top: 16px solid #3498db;
   width: 120px;
   height: 120px;
-  -webkit-animation: spin 3s linear;
+  -webkit-animation: chargeur 3s linear;
   animation: chargeur 3s linear;
 }
 
-@-webkit-keyframes chargeur {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(1080deg);
-  }
-}
-@keyframes chargeur {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  100% {
-    transform: rotate(1080deg) scale(0);
-  }
-}
-@-webkit-keyframes loader {
-  0% {
-    -webkit-transform: scale(0deg);
-  }
-  100% {
-    -webkit-transform: scale(1080deg);
-  }
-}
-@keyframes loader {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
 main .section1 form {
   display: flex;
   justify-content: center;
@@ -147,7 +168,7 @@ main .section1 .Button {
   transition-duration: 400ms;
 }
 main .section1 .Button:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
   opacity: 0.9;
 }
 main .section1 .FonctionSize {
@@ -243,33 +264,6 @@ main .section2 article .new {
   text-align: center;
   display: grid;
   place-items: center;
-}
-
-footer {
-  height: 210px;
-  background-color: #353535;
-}
-footer h1 {
-  width: 138px;
-  padding: 30px 0 20px 20px;
-  font-family: Shrikhand, sans-serif;
-  color: white;
-}
-footer nav {
-  color: white;
-  padding-left: 20px;
-}
-footer nav li {
-  padding-bottom: 10px;
-}
-footer nav li a {
-  color: white;
-}
-footer nav li .lien1 {
-  margin-left: 10px;
-}
-footer nav li .lien2 {
-  margin-left: 5px;
 }
 
 /*-------------------Media queries------------------------*/

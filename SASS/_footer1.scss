@@ -1,11 +1,14 @@
 footer {
-    height: 210px;
+    position: absolute;
+    top: 1580px;
+    height: 220px;
     background-color: v.$black-color;
+    width: 375px;
     h1 {
         width: 138px;
         padding: 30px 0 20px 20px;
-        font-family: Shrikhand, sans-serif;
         color: v.$white-color;
+        font-family: Shrikhand, sans-serif;
     }
     nav {
         color: v.$white-color;
@@ -14,14 +17,18 @@ footer {
             padding-bottom: 10px;
             a {
                 color: v.$white-color;
+                
             }
             .lien1 {
                 margin-left: 10px;
             }
             .lien2 {
                 margin-left: 5px;
-            } 
+            }
         }
-        
     }
+}
+.positionFooter {
+    position: absolute;
+    top: 1680px;
 }
