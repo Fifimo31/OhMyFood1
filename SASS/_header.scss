@@ -1,0 +1,19 @@
+header {
+    .logo {
+        display: flex;
+        justify-content: center;
+        height: 63px;
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+    h1 {
+        font-family: Shrikhand, sans-serif;
+        width: 162px;
+    }
+    .logo1 {
+        margin-right: 100px;
+    }
+    
+}

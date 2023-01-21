@@ -90,3 +90,28 @@
     margin: 20px;
     color: #3a3636ab;
 }
+.arrow-left::before {
+    font: var(--fa-font-solid);
+    content: "\f060";
+    color: black;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    }
+.utensils::before {
+    font: var(--fa-font-solid);
+    content: "\f2e7";
+    }
+.handshake-angle::before {
+    font: var(--fa-font-solid);
+    content: "\f4c4";
+  }
+.check1 {
+    font: var(--fa-font-regular);
+    content: "\f058";
+    color: #99E2D0;
+    width: 20px;
+    height: 20px;
+    background: white;
+}
