@@ -44,7 +44,7 @@ main {
                 box-shadow: inset 0 3px 1px v.$dark-gray-color;
             }
         }
-        .Texte {
+        .titre-principal {
             display: flex;
             flex-direction: column;
             padding-top: 50px;
@@ -63,13 +63,13 @@ main {
                 font-size: 18px;
             }
         }
-        .ButtonCenter {
+        .button-center {
             @include button-flex;
         }
-        .Button {
+        .button {
             @include button; 
         }
-        .FonctionSize {
+        .fonctionnement-size {
             height: 440px;
             h2 {
                 padding: 50px 0 20px 20px;
@@ -147,11 +147,12 @@ main {
                 position: absolute;
                 bottom: 20px;
                 right: 0;
-                &:hover i::after{
-                    opacity: 1;
-                    height: 100%;
-                }   
+                
             }
+            a:hover i::after{
+                opacity: 1;
+                height: 100%;
+            }   
             .new {
                 position: absolute;
                 width: 80px;
@@ -167,24 +168,18 @@ main {
         }
     }
 }
-/*-------------------Media queries------------------------*/
+
 @media all and (min-width: 378px){
-    body {
-        width: 100%;
-        .container{
-            width: 100%;
-        }
-    }
     main {
         .section1 {
-            .Texte {
+            .titre-principal {
                 height: 275px;
                 h1 {
                     width: auto;
                     padding-left: 0;
                 }
             }
-            .FonctionSize {
+            .fonctionnement-size {
                 height: 262px;
                 h2 {
                     padding-left: 205px;
@@ -215,27 +210,5 @@ main {
             }
         }
     }
-    footer {
-        position: relative;
-        height: 100px;
-        h1 {
-            position: absolute;
-            left: 1250px;
-            top: 35px;
-            padding: 0 0 0px 10px;
-        }
-        nav {
-            position: absolute;
-            top: 50px;
-            ul {
-                display: flex;
-                li {
-                    padding-left: 70px;
-                }
-                .marginLeft {
-                    margin-left: 400px;
-                }
-            }
-        }
-    }
+    
 }

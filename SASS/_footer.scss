@@ -25,3 +25,28 @@ footer {
         
     }
 }
+@media all and (min-width: 378px){
+    footer {
+        position: relative;
+        height: 100px;
+        h1 {
+            position: absolute;
+            left: 1250px;
+            top: 35px;
+            padding: 0 0 0px 10px;
+        }
+        nav {
+            position: absolute;
+            top: 50px;
+            ul {
+                display: flex;
+                li {
+                    padding-left: 70px;
+                }
+                .marginLeft {
+                    margin-left: 400px;
+                }
+            }
+        }
+    }
+}

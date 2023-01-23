@@ -16,3 +16,11 @@ a {
     margin: auto;
     position: relative;
 }
+@media all and (min-width: 378px){
+    body {
+        width: 100%;
+        .container{
+            width: 100%;
+        }
+    }
+}
