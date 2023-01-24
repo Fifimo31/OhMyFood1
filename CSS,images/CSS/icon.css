@@ -77,18 +77,24 @@
     content: "\f3cd";
     margin: 20px;
     color: #3a3636ab;
+    position: absolute;
+    left: 53px;
 }
 .list-ul::before {
     font: var(--fa-font-solid);
     content: "\f0ca";
     margin: 30px;
     color: #3a3636ab;
+    position: absolute;
+    left: 42px;
 }
 .store::before {
     font: var(--fa-font-solid);
     content: "\f54e";
     margin: 20px;
     color: #3a3636ab;
+    position: absolute;
+    left: 44px;
 }
 .arrow-left::before {
     font: var(--fa-font-solid);

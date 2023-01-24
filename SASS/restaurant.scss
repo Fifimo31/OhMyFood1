@@ -1,9 +1,16 @@
 @use 'var' as v;
-@import "./base";
-@import "./header";
-@import "./footer1";
-@import "./animation";
+@use './mixin' as m;
+@use "./base";
+@use './header';
+@use './footer';
+@use './animation';
 
+.loader {
+    @include m.loader;
+}
+.chargeur {
+   @include m.chargeur;
+}
 main {
     img {
         width: 375px;
@@ -31,14 +38,14 @@ main {
             height: 100%;
         }    
     } 
-    h1 {
+    h2 {
         font-family: Shrikhand;
         font-size: 28px;
         font-style: italic;
         font-weight: 400;
         margin: 30px 0 30px 20px;
     }
-    h2 {
+    h3 {
         font-size: 18px;
     }
     
@@ -57,10 +64,11 @@ main {
         margin: 20px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        animation: repas 1s;
+        animation: repas 6s;
         animation-fill-mode: both;
         display: flex;
         justify-content: space-between;
+        cursor: pointer;
         @for $i from 2 through 5 {
             &:nth-child(#{$i}) {
                 animation-delay: 150ms *
@@ -68,13 +76,13 @@ main {
             }
         }
         .liste-text {
-            h2 {
+            h3 {
                 padding: 15px 0 5px 10px;
-                @include point-suspention;
+                @include m.point-suspention;
             }
             p {
                 padding: 0px 0 5px 10px;
-                @include point-suspention;
+                @include m.point-suspention;
             }
         }
         .liste-PriceCheck {
@@ -104,39 +112,38 @@ main {
         }
         &:hover .liste-PriceCheck__check {
             margin-right: 0;
+            [class*=check] {
+                animation: check-rotate 0.9s ;
+            }
         }
     }
     article {
         margin-top: 50px;
     }
     .ButtonCenter {
-       @include button-flex;
+       @include m.button-flex;
     }
     .Button {
-        @include button;
+        @include m.button;
     }
 }
 .heightMain {
     height: 1505px;
 }
-/*-------------------Media queries---------------*/
+footer {
+    position: absolute;
+    top: 1580px;
+    height: 220px;
+    background-color: v.$black-color;
+    width: 375px;
+}
+.positionFooter {
+    position: absolute;
+    top: 1680px;
+}
+
 @media all and (min-width: 378px){
-    body {
-        width: 100%;
-        .container{
-            width: 100%;
-        }
-    }
-    header {
-        position: relative;
-        .arrow-left::before {
-            position: absolute;
-            left: 170px;
-            top: 20px;
-        }
-        
-    }
-    
+   
     main {
         img {
             width: 100%;
@@ -163,7 +170,7 @@ main {
             .liste {
                 width: auto;
                 .liste-text{
-                    h2, p {
+                    h3, p {
                     width: auto;
                     }
                 }
@@ -176,30 +183,14 @@ main {
     .heightMain {
         height: 1505px;
     }
+}
+@media all and (min-width: 378px){
+   
     footer {
         top: 1395px;
         position: relative;
         height: 100px;
         width: 100%;
-        h1 {
-            position: absolute;
-            left: 1250px;
-            top: 33px;
-            padding: 0 0 0px 10px;
-        }
-        nav {
-            position: absolute;
-            top: 50px;
-            ul {
-                display: flex;
-                li {
-                    padding-left: 70px;
-                }
-                .marginLeft {
-                    margin-left: 400px;
-                }
-            }
-        }
     }
     .positionTop {
         top: 1460px;

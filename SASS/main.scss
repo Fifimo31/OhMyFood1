@@ -1,34 +1,17 @@
 @use 'var' as v;
-@import "./base";
-@import "./header";
-@import "./animation";
-@import "./mixin";
-@import "./footer";
+@use './base';
+@use './header';
+@use './animation';
+@use './mixin' as m;
+@use './footer';
 .loader {
-    background-color: v.$white-color;
-    height: 100vh;
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    opacity: 0.9;
-    animation: loader 2s forwards;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation-delay: 3s;
-    
+   @include m.loader;
 }
 .chargeur {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: chargeur 3s linear;
-    animation: chargeur 3s linear;
+   @include m.chargeur;
 }
 main {
-    .section1 {
+    .presentation {
         form {
             display: flex;
             justify-content: center;
@@ -50,7 +33,7 @@ main {
             padding-top: 50px;
             height: 320px;
             background-color: v.$light-gray-color;
-            h1 {
+            h2 {
             font-size: 24px;
             text-align: center;
             margin-bottom: 20px;
@@ -64,14 +47,14 @@ main {
             }
         }
         .button-center {
-            @include button-flex;
+            @include m.button-flex;
         }
         .button {
-            @include button; 
+            @include m.button; 
         }
         .fonctionnement-size {
             height: 440px;
-            h2 {
+            h3 {
                 padding: 50px 0 20px 20px;
             }
             ul {
@@ -88,23 +71,20 @@ main {
                     text-decoration: none;
                     height: 70px;
                     width: 320px;
-                    margin-left: 20px;
+                    margin: 20px;
                     padding-right: 55px;
                     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
                 }
-                p {
-                    position: relative;
-                    top: 48px;
-                    left: 10px;
-                    color: v.$white-color;
-                    background-color: v.$primaire-color;
-                    width: 25px;
-                    height: 25px;
-                    border: 2px solid v.$primaire-color;
-                    border-radius: 25px;
-                    margin: 0 30px 0 0;
-                    padding-left: 5px;
-                    padding-top: 2px;
+                span {
+                    @include m.number;
+                }
+                .number2 {
+                    @include m.number;
+                    right: 78px;
+                }
+                .number3 {
+                    @include m.number;
+                    right: 35px;
                 }
                 li:hover {
                     background-color: v.$light-purple;
@@ -112,10 +92,10 @@ main {
             }
         }
     }
-    .section2 {
+    .restaurants {
         background-color: v.$light-gray-color;
         height: 1370px;
-        h2 {
+        h3 {
             padding: 60px 0 40px 20px;
         }
         article {
@@ -133,7 +113,7 @@ main {
                 object-fit: cover;
                 border-radius: 15px 15px 0 0;
             }
-            h3 {
+            h4 {
                 margin: 5px 0 5px 15px;
             }
             p {
@@ -171,17 +151,17 @@ main {
 
 @media all and (min-width: 378px){
     main {
-        .section1 {
+        .presentation {
             .titre-principal {
                 height: 275px;
-                h1 {
+                h2 {
                     width: auto;
                     padding-left: 0;
                 }
             }
             .fonctionnement-size {
                 height: 262px;
-                h2 {
+                h3 {
                     padding-left: 205px;
                 }
                 nav {
@@ -190,16 +170,21 @@ main {
                     ul {
                         display: flex;
                         flex-direction: row;
-                        p {
-                            position: relative;
-                            top: 24px;
-                            left: 62px;
+                        position: absolute;
+                        .store::before {
+                            right: 250px;
+                        }
+                        .list-ul::before {
+                            left: 395px;
+                        }
+                        .store::before {
+                            left: 760px;
                         }
                     }
                 }
             }
         }
-        .section2 {
+        .restaurants {
             height: 550px;
             h2 {
                 padding-left: 220px;

@@ -18,6 +18,14 @@ a {
   position: relative;
 }
 
+@media all and (min-width: 378px) {
+  body {
+    width: 100%;
+  }
+  body .container {
+    width: 100%;
+  }
+}
 header .logo {
   display: flex;
   justify-content: center;
@@ -35,18 +43,25 @@ header .logo1 {
   margin-right: 100px;
 }
 
+@media all and (min-width: 378px) {
+  header {
+    position: relative;
+  }
+  header .arrow-left::before {
+    position: absolute;
+    left: 170px;
+    top: 20px;
+  }
+}
 footer {
-  position: absolute;
-  top: 1580px;
-  height: 220px;
+  height: 210px;
   background-color: #353535;
-  width: 375px;
 }
 footer h1 {
   width: 138px;
   padding: 30px 0 20px 20px;
-  color: white;
   font-family: Shrikhand, sans-serif;
+  color: white;
 }
 footer nav {
   color: white;
@@ -65,14 +80,34 @@ footer nav li .lien2 {
   margin-left: 5px;
 }
 
-.positionFooter {
-  position: absolute;
-  top: 1680px;
+@media all and (min-width: 378px) {
+  footer {
+    position: relative;
+    height: 100px;
+  }
+  footer h1 {
+    position: absolute;
+    left: 1250px;
+    top: 35px;
+    padding: 0 0 0px 10px;
+  }
+  footer nav {
+    position: absolute;
+    top: 50px;
+  }
+  footer nav ul {
+    display: flex;
+  }
+  footer nav ul li {
+    padding-left: 70px;
+  }
+  footer nav ul .marginLeft {
+    margin-left: 400px;
+  }
 }
-
 @keyframes repas {
   0% {
-    transform: translateY(50%);
+    transform: translateY(100%);
     opacity: 0;
   }
   100% {
@@ -80,6 +115,54 @@ footer nav li .lien2 {
     opacity: 1;
   }
 }
+@keyframes chargeur {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(0);
+  }
+}
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes check-rotate {
+  0% {
+    transform: rotate(-370deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.loader {
+  background-color: white;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: loader 200ms 2s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-delay: 1.5s;
+}
+
+.chargeur {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: chargeur 1.5s linear;
+  animation: chargeur 1.5s infinite linear;
+}
+
 main img {
   width: 375px;
   height: 275px;
@@ -106,14 +189,14 @@ main .positionHeart:hover i::after {
   opacity: 1;
   height: 100%;
 }
-main h1 {
+main h2 {
   font-family: Shrikhand;
   font-size: 28px;
   font-style: italic;
   font-weight: 400;
   margin: 30px 0 30px 20px;
 }
-main h2 {
+main h3 {
   font-size: 18px;
 }
 main .titre {
@@ -130,10 +213,11 @@ main .liste {
   margin: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  animation: repas 1s;
+  animation: repas 6s;
   animation-fill-mode: both;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 main .liste:nth-child(2) {
   animation-delay: 300ms;
@@ -147,7 +231,7 @@ main .liste:nth-child(4) {
 main .liste:nth-child(5) {
   animation-delay: 750ms;
 }
-main .liste .liste-text h2 {
+main .liste .liste-text h3 {
   padding: 15px 0 5px 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -187,6 +271,9 @@ main .liste .liste-PriceCheck .liste-PriceCheck__check [class*=check] {
 main .liste:hover .liste-PriceCheck__check {
   margin-right: 0;
 }
+main .liste:hover .liste-PriceCheck__check [class*=check] {
+  animation: check-rotate 0.9s;
+}
 main article {
   margin-top: 50px;
 }
@@ -220,22 +307,20 @@ main .Button:hover {
   height: 1505px;
 }
 
-/*-------------------Media queries---------------*/
+footer {
+  position: absolute;
+  top: 1580px;
+  height: 220px;
+  background-color: #353535;
+  width: 375px;
+}
+
+.positionFooter {
+  position: absolute;
+  top: 1680px;
+}
+
 @media all and (min-width: 378px) {
-  body {
-    width: 100%;
-  }
-  body .container {
-    width: 100%;
-  }
-  header {
-    position: relative;
-  }
-  header .arrow-left::before {
-    position: absolute;
-    left: 170px;
-    top: 20px;
-  }
   main img {
     width: 100%;
   }
@@ -260,7 +345,7 @@ main .Button:hover {
   main article .liste {
     width: auto;
   }
-  main article .liste .liste-text h2, main article .liste .liste-text p {
+  main article .liste .liste-text h3, main article .liste .liste-text p {
     width: auto;
   }
   main article .liste:hover .liste-PriceCheck__check {
@@ -269,30 +354,13 @@ main .Button:hover {
   .heightMain {
     height: 1505px;
   }
+}
+@media all and (min-width: 378px) {
   footer {
     top: 1395px;
     position: relative;
     height: 100px;
     width: 100%;
-  }
-  footer h1 {
-    position: absolute;
-    left: 1250px;
-    top: 33px;
-    padding: 0 0 0px 10px;
-  }
-  footer nav {
-    position: absolute;
-    top: 50px;
-  }
-  footer nav ul {
-    display: flex;
-  }
-  footer nav ul li {
-    padding-left: 70px;
-  }
-  footer nav ul .marginLeft {
-    margin-left: 400px;
   }
   .positionTop {
     top: 1460px;

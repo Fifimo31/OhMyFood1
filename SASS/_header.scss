@@ -17,3 +17,14 @@ header {
     }
     
 }
+@media all and (min-width: 378px){
+    header {
+        position: relative;
+        .arrow-left::before {
+            position: absolute;
+            left: 170px;
+            top: 20px;
+        }
+        
+    }
+}
