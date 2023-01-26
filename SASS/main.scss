@@ -60,6 +60,7 @@ main {
             ul {
                 display: flex;
                 flex-direction: column;
+                cursor: pointer;
                 li {
                     color: black;
                     background: v.$light-gray-color;
@@ -88,6 +89,9 @@ main {
                 }
                 li:hover {
                     background-color: v.$light-purple;
+                }
+                &:hover .store {
+                    color: v.$primaire-color;
                 }
             }
         }
@@ -161,12 +165,8 @@ main {
             }
             .fonctionnement-size {
                 height: 262px;
-                h3 {
-                    padding-left: 205px;
-                }
+                margin-left: 21%;
                 nav {
-                    display: flex;
-                    justify-content: center;
                     ul {
                         display: flex;
                         flex-direction: row;
@@ -186,12 +186,12 @@ main {
         }
         .restaurants {
             height: 550px;
-            h2 {
-                padding-left: 220px;
+            h3 {
+                margin-left: 10%;
             }
             .flexRow {
                 display: flex;
-                padding-left: 200px;
+                margin-left: 10%;
             }
         }
     }

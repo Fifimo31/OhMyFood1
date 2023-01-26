@@ -231,6 +231,7 @@ main .presentation .fonctionnement-size h3 {
 main .presentation .fonctionnement-size ul {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 main .presentation .fonctionnement-size ul li {
   color: black;
@@ -290,6 +291,9 @@ main .presentation .fonctionnement-size ul .number3 {
 }
 main .presentation .fonctionnement-size ul li:hover {
   background-color: #F5EDFF;
+}
+main .presentation .fonctionnement-size ul:hover .store {
+  color: #9356DC;
 }
 main .restaurants {
   background-color: #F7F7F7;
@@ -354,13 +358,7 @@ main .restaurants article .new {
   }
   main .presentation .fonctionnement-size {
     height: 262px;
-  }
-  main .presentation .fonctionnement-size h3 {
-    padding-left: 205px;
-  }
-  main .presentation .fonctionnement-size nav {
-    display: flex;
-    justify-content: center;
+    margin-left: 21%;
   }
   main .presentation .fonctionnement-size nav ul {
     display: flex;
@@ -379,12 +377,12 @@ main .restaurants article .new {
   main .restaurants {
     height: 550px;
   }
-  main .restaurants h2 {
-    padding-left: 220px;
+  main .restaurants h3 {
+    margin-left: 10%;
   }
   main .restaurants .flexRow {
     display: flex;
-    padding-left: 200px;
+    margin-left: 10%;
   }
 }
 
