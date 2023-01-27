@@ -75,24 +75,32 @@ main {
                     margin: 20px;
                     padding-right: 55px;
                     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+                    &:hover {
+                        background-color: v.$light-purple;
+                    }
+                }
+                .margin {
+                    margin-right: -56px;
+                    margin-left: -26px;
                 }
                 span {
                     @include m.number;
                 }
                 .number2 {
                     @include m.number;
-                    right: 78px;
+                    right: 85px;
                 }
                 .number3 {
                     @include m.number;
-                    right: 35px;
+                    right: 83px;
                 }
-                li:hover {
-                    background-color: v.$light-purple;
+                i {
+                    color: #3a3636ab;
+
                 }
-                &:hover .store {
+                li:hover i {
                     color: v.$primaire-color;
-                }
+                } 
             }
         }
     }
@@ -131,11 +139,11 @@ main {
                 position: absolute;
                 bottom: 20px;
                 right: 0;
-                
-            }
-            a:hover i::after{
-                opacity: 1;
-                height: 100%;
+                &:hover i::after{
+                    opacity: 1;
+                    height: 100%;
+                    cursor: pointer;
+                }
             }   
             .new {
                 position: absolute;
@@ -144,7 +152,7 @@ main {
                 background-color: v.$tertiary-color;
                 color: v.$green-color;
                 left: 235px;
-                top: 35px;
+                top: 24px;
                 text-align: center;
                 display: grid;
                 place-items: center;

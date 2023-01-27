@@ -79,6 +79,7 @@
     color: #3a3636ab;
     position: absolute;
     left: 53px;
+    top: 28px;
 }
 .list-ul::before {
     font: var(--fa-font-solid);
@@ -86,15 +87,17 @@
     margin: 30px;
     color: #3a3636ab;
     position: absolute;
-    left: 42px;
+    left: 400px;
+    top: 18px;
 }
-.store::before {
+.store::before i{
     font: var(--fa-font-solid);
     content: "\f54e";
     margin: 20px;
     color: #3a3636ab;
     position: absolute;
-    left: 44px;
+    right: 260px;
+    top: 27px;
 }
 .arrow-left::before {
     font: var(--fa-font-solid);
@@ -108,10 +111,12 @@
 .utensils::before {
     font: var(--fa-font-solid);
     content: "\f2e7";
+    margin-right: 10px;
     }
 .handshake-angle::before {
     font: var(--fa-font-solid);
     content: "\f4c4";
+    margin-right: 10px;
   }
 .check1 {
     font: var(--fa-font-regular);

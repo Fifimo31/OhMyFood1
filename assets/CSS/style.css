@@ -107,12 +107,6 @@ footer nav li {
 footer nav li a {
   color: white;
 }
-footer nav li .lien1 {
-  margin-left: 10px;
-}
-footer nav li .lien2 {
-  margin-left: 5px;
-}
 
 @media all and (min-width: 378px) {
   footer {
@@ -248,9 +242,16 @@ main .presentation .fonctionnement-size ul li {
   padding-right: 55px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
+main .presentation .fonctionnement-size ul li:hover {
+  background-color: #F5EDFF;
+}
+main .presentation .fonctionnement-size ul .margin {
+  margin-right: -56px;
+  margin-left: -26px;
+}
 main .presentation .fonctionnement-size ul span {
   position: relative;
-  right: 70px;
+  right: 76px;
   color: white;
   background-color: #9356DC;
   width: 25px;
@@ -263,7 +264,7 @@ main .presentation .fonctionnement-size ul span {
 }
 main .presentation .fonctionnement-size ul .number2 {
   position: relative;
-  right: 70px;
+  right: 76px;
   color: white;
   background-color: #9356DC;
   width: 25px;
@@ -273,11 +274,11 @@ main .presentation .fonctionnement-size ul .number2 {
   margin: 0 30px 0 0;
   padding-left: 5px;
   padding-top: 2px;
-  right: 78px;
+  right: 85px;
 }
 main .presentation .fonctionnement-size ul .number3 {
   position: relative;
-  right: 70px;
+  right: 76px;
   color: white;
   background-color: #9356DC;
   width: 25px;
@@ -287,12 +288,12 @@ main .presentation .fonctionnement-size ul .number3 {
   margin: 0 30px 0 0;
   padding-left: 5px;
   padding-top: 2px;
-  right: 35px;
+  right: 83px;
 }
-main .presentation .fonctionnement-size ul li:hover {
-  background-color: #F5EDFF;
+main .presentation .fonctionnement-size ul i {
+  color: rgba(58, 54, 54, 0.6705882353);
 }
-main .presentation .fonctionnement-size ul:hover .store {
+main .presentation .fonctionnement-size ul li:hover i {
   color: #9356DC;
 }
 main .restaurants {
@@ -331,9 +332,10 @@ main .restaurants article .heart {
   bottom: 20px;
   right: 0;
 }
-main .restaurants article a:hover i::after {
+main .restaurants article .heart:hover i::after {
   opacity: 1;
   height: 100%;
+  cursor: pointer;
 }
 main .restaurants article .new {
   position: absolute;
@@ -342,7 +344,7 @@ main .restaurants article .new {
   background-color: #99E2D0;
   color: #008766;
   left: 235px;
-  top: 35px;
+  top: 24px;
   text-align: center;
   display: grid;
   place-items: center;

@@ -15,7 +15,6 @@ a {
 .container {
   width: 375px;
   margin: auto;
-  position: relative;
 }
 
 @media all and (min-width: 378px) {
@@ -72,12 +71,6 @@ footer nav li {
 }
 footer nav li a {
   color: white;
-}
-footer nav li .lien1 {
-  margin-left: 10px;
-}
-footer nav li .lien2 {
-  margin-left: 5px;
 }
 
 @media all and (min-width: 378px) {
@@ -169,12 +162,12 @@ main img {
   object-fit: cover;
 }
 main section {
-  height: 1285px;
   background: #F7F7F7;
-  position: absolute;
-  top: 295px;
   border-radius: 40px 40px 0 0;
-  width: 375px;
+  width: 100%;
+  position: relative;
+  top: -70px;
+  margin-bottom: -80px;
 }
 main .positionHeart {
   position: relative;
@@ -184,8 +177,9 @@ main .positionHeart .heart {
   bottom: 2px;
   right: -9px;
   font-size: 28px;
+  cursor: pointer;
 }
-main .positionHeart:hover i::after {
+main .positionHeart .heart:hover i::after {
   opacity: 1;
   height: 100%;
 }
@@ -205,7 +199,43 @@ main .titre {
   width: 45px;
   padding-bottom: 10px;
 }
-main .liste {
+main .liste-entrees:nth-child(2) {
+  animation-delay: 300ms;
+}
+main .liste-entrees:nth-child(3) {
+  animation-delay: 450ms;
+}
+main .liste-entrees:nth-child(4) {
+  animation-delay: 600ms;
+}
+main .liste-entrees:nth-child(5) {
+  animation-delay: 750ms;
+}
+main .liste-plat:nth-child(2) {
+  animation-delay: 1400ms;
+}
+main .liste-plat:nth-child(3) {
+  animation-delay: 2100ms;
+}
+main .liste-plat:nth-child(4) {
+  animation-delay: 2800ms;
+}
+main .liste-plat:nth-child(5) {
+  animation-delay: 3500ms;
+}
+main .liste-dessert:nth-child(2) {
+  animation-delay: 2400ms;
+}
+main .liste-dessert:nth-child(3) {
+  animation-delay: 3600ms;
+}
+main .liste-dessert:nth-child(4) {
+  animation-delay: 4800ms;
+}
+main .liste-dessert:nth-child(5) {
+  animation-delay: 6000ms;
+}
+main .liste-entrees, main .liste-plat, main .liste-dessert {
   background-color: white;
   width: 340px;
   height: 70px;
@@ -219,40 +249,28 @@ main .liste {
   justify-content: space-between;
   cursor: pointer;
 }
-main .liste:nth-child(2) {
-  animation-delay: 300ms;
-}
-main .liste:nth-child(3) {
-  animation-delay: 450ms;
-}
-main .liste:nth-child(4) {
-  animation-delay: 600ms;
-}
-main .liste:nth-child(5) {
-  animation-delay: 750ms;
-}
-main .liste .liste-text h3 {
+main .liste-entrees .liste-text h3, main .liste-plat .liste-text h3, main .liste-dessert .liste-text h3 {
   padding: 15px 0 5px 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   width: 240px;
 }
-main .liste .liste-text p {
+main .liste-entrees .liste-text p, main .liste-plat .liste-text p, main .liste-dessert .liste-text p {
   padding: 0px 0 5px 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   width: 240px;
 }
-main .liste .liste-PriceCheck {
+main .liste-entrees .liste-PriceCheck, main .liste-plat .liste-PriceCheck, main .liste-dessert .liste-PriceCheck {
   display: flex;
   align-items: center;
 }
-main .liste .liste-PriceCheck .liste-PriceCheck__price strong {
+main .liste-entrees .liste-PriceCheck .liste-PriceCheck__price strong, main .liste-plat .liste-PriceCheck .liste-PriceCheck__price strong, main .liste-dessert .liste-PriceCheck .liste-PriceCheck__price strong {
   margin-right: 10px;
 }
-main .liste .liste-PriceCheck .liste-PriceCheck__check {
+main .liste-entrees .liste-PriceCheck .liste-PriceCheck__check, main .liste-plat .liste-PriceCheck .liste-PriceCheck__check, main .liste-dessert .liste-PriceCheck .liste-PriceCheck__check {
   width: 70px;
   height: 70px;
   background: #99E2D0;
@@ -263,15 +281,15 @@ main .liste .liste-PriceCheck .liste-PriceCheck__check {
   margin-right: -70px;
   transition: all 1s;
 }
-main .liste .liste-PriceCheck .liste-PriceCheck__check [class*=check] {
+main .liste-entrees .liste-PriceCheck .liste-PriceCheck__check [class*=check], main .liste-plat .liste-PriceCheck .liste-PriceCheck__check [class*=check], main .liste-dessert .liste-PriceCheck .liste-PriceCheck__check [class*=check] {
   color: #fff;
   background: #99E2D0;
   font-size: 2em;
 }
-main .liste:hover .liste-PriceCheck__check {
+main .liste-entrees:hover .liste-PriceCheck__check, main .liste-plat:hover .liste-PriceCheck__check, main .liste-dessert:hover .liste-PriceCheck__check {
   margin-right: 0;
 }
-main .liste:hover .liste-PriceCheck__check [class*=check] {
+main .liste-entrees:hover .liste-PriceCheck__check [class*=check], main .liste-plat:hover .liste-PriceCheck__check [class*=check], main .liste-dessert:hover .liste-PriceCheck__check [class*=check] {
   animation: check-rotate 0.9s;
 }
 main article {
@@ -303,21 +321,10 @@ main .Button:hover {
   opacity: 0.9;
 }
 
-.heightMain {
-  height: 1505px;
-}
-
 footer {
-  position: absolute;
-  top: 1580px;
   height: 220px;
   background-color: #353535;
-  width: 375px;
-}
-
-.positionFooter {
-  position: absolute;
-  top: 1680px;
+  width: 100%;
 }
 
 @media all and (min-width: 378px) {
@@ -329,7 +336,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1450px;
   }
   main .sectionCenter {
     display: flex;
@@ -357,17 +363,9 @@ footer {
 }
 @media all and (min-width: 378px) {
   footer {
-    top: 1395px;
-    position: relative;
     height: 100px;
     width: 100%;
   }
-  .positionTop {
-    top: 1460px;
-  }
-  .positionFooter {
-    top: 1800px;
-  }
 }
 
-/*# sourceMappingURL=style1.css.map */
+/*# sourceMappingURL=restaurants.css.map */

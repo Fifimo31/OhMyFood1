@@ -18,12 +18,12 @@ main {
         object-fit: cover;
     }
     section {
-        background: #F7F7F7;
+        background: v.$light-gray-color;
         border-radius: 40px 40px 0 0;
         width: 100%;
         position: relative;
-        top: -80px;
-        margin-bottom: -70px;
+        top: -70px;
+        margin-bottom: -80px;
     }
     .positionHeart {
         position: relative;
@@ -31,12 +31,14 @@ main {
             position: absolute;
             bottom: 2px;
             right: -9px;
-            font-size: 28px;  
+            font-size: 28px;
+            cursor: pointer;
+            &:hover i::after{
+                opacity: 1;
+                height: 100%;
+            }      
         }
-        &:hover i::after{
-            opacity: 1;
-            height: 100%;
-        }    
+        
     } 
     h2 {
         font-family: Shrikhand;
@@ -56,7 +58,31 @@ main {
         padding-bottom: 10px;
        
     }
-    .liste {
+    .liste-entrees {
+        @for $i from 2 through 5 {
+            &:nth-child(#{$i}) {
+                animation-delay: 150ms *
+                $i;
+            }
+        }
+    }
+    .liste-plat {
+        @for $i from 2 through 5 {
+            &:nth-child(#{$i}) {
+                animation-delay: 700ms *
+                $i;
+            }
+        }
+    }
+    .liste-dessert {
+        @for $i from 2 through 5 {
+            &:nth-child(#{$i}) {
+                animation-delay: 1200ms *
+                $i;
+            }
+        }
+    }
+    .liste-entrees, .liste-plat, .liste-dessert {
         background-color: v.$white-color;
         width: 340px;
         height: 70px;
@@ -69,12 +95,6 @@ main {
         display: flex;
         justify-content: space-between;
         cursor: pointer;
-        @for $i from 2 through 5 {
-            &:nth-child(#{$i}) {
-                animation-delay: 150ms *
-                $i;
-            }
-        }
         .liste-text {
             h3 {
                 padding: 15px 0 5px 10px;
@@ -115,6 +135,7 @@ main {
             [class*=check] {
                 animation: check-rotate 0.9s ;
             }
+            
         }
     }
     article {
@@ -127,20 +148,13 @@ main {
         @include m.button;
     }
 }
-.heightMain {
-    height: 1505px;
-}
+
 footer {
-    position: absolute;
-    top: 1580px;
     height: 220px;
     background-color: v.$black-color;
-    width: 375px;
+    width: 100%;
 }
-.positionFooter {
-    position: absolute;
-    top: 1680px;
-}
+
 
 @media all and (min-width: 378px){
    
@@ -153,7 +167,6 @@ footer {
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 1450px;
         }
         .sectionCenter {
             display: flex;
@@ -187,15 +200,8 @@ footer {
 @media all and (min-width: 378px){
    
     footer {
-        top: 1395px;
-        position: relative;
         height: 100px;
         width: 100%;
     }
-    .positionTop {
-        top: 1460px;
-    }
-    .positionFooter {
-        top: 1800px;
-    }
+    
 }
