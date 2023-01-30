@@ -249,19 +249,23 @@ main .liste-entrees, main .liste-plat, main .liste-dessert {
   justify-content: space-between;
   cursor: pointer;
 }
+main .liste-entrees .liste-text, main .liste-plat .liste-text, main .liste-dessert .liste-text {
+  width: 100%;
+}
+main .liste-entrees .liste-text:hover, main .liste-plat .liste-text:hover, main .liste-dessert .liste-text:hover {
+  width: calc(100% - 140px);
+}
 main .liste-entrees .liste-text h3, main .liste-plat .liste-text h3, main .liste-dessert .liste-text h3 {
   padding: 15px 0 5px 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 240px;
 }
 main .liste-entrees .liste-text p, main .liste-plat .liste-text p, main .liste-dessert .liste-text p {
   padding: 0px 0 5px 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 240px;
 }
 main .liste-entrees .liste-PriceCheck, main .liste-plat .liste-PriceCheck, main .liste-dessert .liste-PriceCheck {
   display: flex;

@@ -96,6 +96,10 @@ main {
         justify-content: space-between;
         cursor: pointer;
         .liste-text {
+            width: 100%;
+            &:hover {
+            width: calc(100% - 140px);
+            }
             h3 {
                 padding: 15px 0 5px 10px;
                 @include m.point-suspention;
