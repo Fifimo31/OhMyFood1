@@ -37,8 +37,7 @@ main {
             font-size: 24px;
             text-align: center;
             margin-bottom: 20px;
-            width: 300px;
-            padding-left: 54px;
+            
             }
             p {
                 text-align: center;
@@ -111,7 +110,7 @@ main {
             padding: 60px 0 40px 20px;
         }
         article {
-            width: 335px;
+            width: auto;
             height: 251px;
             border-radius: 15px;
             margin: 20px 20px 50px 20px;
@@ -120,7 +119,7 @@ main {
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
                 
             img {
-                width: 335px;
+                width: 100%;
                 height: 180px;
                 object-fit: cover;
                 border-radius: 15px 15px 0 0;
@@ -151,7 +150,7 @@ main {
                 height: 29px;
                 background-color: v.$tertiary-color;
                 color: v.$green-color;
-                left: 235px;
+                left: 70%;
                 top: 24px;
                 text-align: center;
                 display: grid;
@@ -161,7 +160,7 @@ main {
     }
 }
 
-@media all and (min-width: 378px){
+@media all and (min-width: 768px){
     main {
         .presentation {
             .titre-principal {

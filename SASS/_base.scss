@@ -12,14 +12,14 @@ a {
     color: black;
 }
 .container {
-    width: 375px;
+    max-width: 767px;
     margin: auto;
 }
-@media all and (min-width: 378px){
+@media all and (min-width: 768px){
     body {
         width: 100%;
         .container{
-            width: 100%;
+            max-width: none;
         }
     }
 }

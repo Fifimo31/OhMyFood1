@@ -5,15 +5,9 @@
 @use './footer';
 @use './animation';
 
-.loader {
-    @include m.loader;
-}
-.chargeur {
-   @include m.chargeur;
-}
 main {
     img {
-        width: 375px;
+        width: 100%;
         height: 275px;
         object-fit: cover;
     }
@@ -84,7 +78,7 @@ main {
     }
     .liste-entrees, .liste-plat, .liste-dessert {
         background-color: v.$white-color;
-        width: 340px;
+        width: 91%;
         height: 70px;
         border-radius: 15px;
         margin: 20px;
@@ -160,7 +154,7 @@ footer {
 }
 
 
-@media all and (min-width: 378px){
+@media all and (min-width: 768px){
    
     main {
         img {
@@ -201,7 +195,7 @@ footer {
         height: 1505px;
     }
 }
-@media all and (min-width: 378px){
+@media all and (min-width: 768px){
    
     footer {
         height: 100px;
