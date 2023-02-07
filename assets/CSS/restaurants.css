@@ -80,6 +80,28 @@ footer nav li a {
   }
   footer h1 {
     position: absolute;
+    left: 760px;
+    top: 35px;
+    padding: 0 0 0px 10px;
+  }
+  footer nav {
+    position: absolute;
+    top: 50px;
+  }
+  footer nav ul {
+    display: flex;
+  }
+  footer nav ul li {
+    padding-right: 70px;
+  }
+}
+@media all and (min-width: 1025px) {
+  footer {
+    position: relative;
+    height: 100px;
+  }
+  footer h1 {
+    position: absolute;
     left: 1250px;
     top: 35px;
     padding: 0 0 0px 10px;
@@ -95,7 +117,7 @@ footer nav li a {
     padding-left: 70px;
   }
   footer nav ul .marginLeft {
-    margin-left: 320px;
+    margin-left: 200px;
   }
 }
 @keyframes repas {
@@ -292,12 +314,9 @@ main .Button {
   height: 50px;
   width: 218px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  transform: scale(1);
-  transition-property: transform;
-  transition-duration: 400ms;
 }
 main .Button:hover {
-  transform: scale(1.1);
+  box-shadow: 2px 3px 10px 9px rgba(0, 0, 0, 0.25);
   opacity: 0.9;
 }
 

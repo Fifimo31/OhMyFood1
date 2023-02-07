@@ -114,6 +114,28 @@ footer nav li a {
   }
   footer h1 {
     position: absolute;
+    left: 760px;
+    top: 35px;
+    padding: 0 0 0px 10px;
+  }
+  footer nav {
+    position: absolute;
+    top: 50px;
+  }
+  footer nav ul {
+    display: flex;
+  }
+  footer nav ul li {
+    padding-right: 70px;
+  }
+}
+@media all and (min-width: 1025px) {
+  footer {
+    position: relative;
+    height: 100px;
+  }
+  footer h1 {
+    position: absolute;
     left: 1250px;
     top: 35px;
     padding: 0 0 0px 10px;
@@ -129,7 +151,7 @@ footer nav li a {
     padding-left: 70px;
   }
   footer nav ul .marginLeft {
-    margin-left: 320px;
+    margin-left: 200px;
   }
 }
 .loader {
@@ -205,12 +227,9 @@ main .presentation .button {
   height: 50px;
   width: 218px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  transform: scale(1);
-  transition-property: transform;
-  transition-duration: 400ms;
 }
 main .presentation .button:hover {
-  transform: scale(1.1);
+  box-shadow: 2px 3px 10px 9px rgba(0, 0, 0, 0.25);
   opacity: 0.9;
 }
 main .presentation .fonctionnement-size {
@@ -348,6 +367,65 @@ main .restaurants article .new {
 }
 
 @media all and (min-width: 768px) {
+  main .presentation .titre-principal {
+    height: 275px;
+  }
+  main .presentation .titre-principal h2 {
+    width: auto;
+    padding-left: 0;
+  }
+  main .presentation .fonctionnement-size {
+    height: 262px;
+  }
+  main .presentation .fonctionnement-size nav ul {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+  }
+  main .presentation .fonctionnement-size nav ul .margin {
+    margin-right: -70px;
+    margin-left: -8px;
+  }
+  main .presentation .fonctionnement-size nav ul span {
+    margin: 0 -7px 0 0;
+  }
+  main .presentation .fonctionnement-size nav ul .number2 {
+    margin: 0 -7px 0 0;
+  }
+  main .presentation .fonctionnement-size nav ul .number3 {
+    margin: 0 -8px 0 0;
+  }
+  main .presentation .fonctionnement-size nav ul li {
+    width: 280px;
+  }
+  main .presentation .fonctionnement-size nav ul .store::before {
+    right: 250px;
+  }
+  main .presentation .fonctionnement-size nav ul .list-ul::before {
+    left: 395px;
+  }
+  main .presentation .fonctionnement-size nav ul .store::before {
+    left: 760px;
+  }
+  main .restaurants {
+    height: 470px;
+  }
+  main .restaurants article {
+    width: 50%;
+    height: 225px;
+    margin: 20px 10px 50px 10px;
+  }
+  main .restaurants article img {
+    height: 165px;
+  }
+  main .restaurants article .new {
+    left: 60%;
+  }
+  main .restaurants .flexRow {
+    display: flex;
+  }
+}
+@media all and (min-width: 1025px) {
   main .presentation .titre-principal {
     height: 275px;
   }

@@ -172,6 +172,72 @@ main {
             }
             .fonctionnement-size {
                 height: 262px;
+                nav {
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        position: absolute;
+                        .margin {
+                            margin-right: -70px;
+                            margin-left: -8px;
+                        }
+                        span {
+                            margin: 0 -7px 0 0;
+                        }
+                        .number2 {
+                            margin: 0 -7px 0 0;
+                        }
+                        .number3 {
+                            margin: 0 -8px 0 0;
+                        }
+                        li {
+                            width: 280px;
+                        }
+                        .store::before {
+                            right: 250px;
+                        }
+                        .list-ul::before {
+                            left: 395px;
+                        }
+                        .store::before {
+                            left: 760px;
+                        }
+                    }
+                }
+            }
+        }
+        .restaurants {
+            height: 470px;
+            article {
+                width: 50%;
+                height: 225px;
+                margin: 20px 10px 50px 10px;
+                img {
+                    height: 165px;
+                }
+                .new{
+                    left: 60%;
+                }
+            }
+            .flexRow {
+                display: flex;
+            }
+        }
+    }
+    
+}
+@media all and (min-width: 1025px){
+    main {
+        .presentation {
+            .titre-principal {
+                height: 275px;
+                h2 {
+                    width: auto;
+                    padding-left: 0;
+                }
+            }
+            .fonctionnement-size {
+                height: 262px;
                 margin-left: 21%;
                 nav {
                     ul {

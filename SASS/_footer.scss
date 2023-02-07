@@ -25,6 +25,28 @@ footer {
         height: 100px;
         h1 {
             position: absolute;
+            left: 760px;
+            top: 35px;
+            padding: 0 0 0px 10px;
+        }
+        nav {
+            position: absolute;
+            top: 50px;
+            ul {
+                display: flex;
+                li {
+                    padding-right: 70px;
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: 1025px){
+    footer {
+        position: relative;
+        height: 100px;
+        h1 {
+            position: absolute;
             left: 1250px;
             top: 35px;
             padding: 0 0 0px 10px;
@@ -38,7 +60,7 @@ footer {
                     padding-left: 70px;
                 }
                 .marginLeft {
-                    margin-left: 320px;
+                    margin-left: 200px;
                 }
             }
         }
