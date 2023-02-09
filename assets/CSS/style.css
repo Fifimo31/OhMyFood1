@@ -111,22 +111,24 @@ footer nav li a {
   footer {
     position: relative;
     height: 100px;
+    top: 0px;
   }
   footer h1 {
     position: absolute;
-    left: 760px;
+    left: 580px;
     top: 35px;
     padding: 0 0 0px 10px;
   }
   footer nav {
     position: absolute;
     top: 50px;
+    padding-left: 10px;
   }
   footer nav ul {
     display: flex;
   }
   footer nav ul li {
-    padding-right: 70px;
+    padding-right: 20px;
   }
 }
 @media all and (min-width: 1025px) {
@@ -375,12 +377,13 @@ main .restaurants article .new {
     padding-left: 0;
   }
   main .presentation .fonctionnement-size {
-    height: 262px;
+    height: 322px;
   }
   main .presentation .fonctionnement-size nav ul {
     display: flex;
     flex-direction: row;
     position: absolute;
+    flex-wrap: wrap;
   }
   main .presentation .fonctionnement-size nav ul .margin {
     margin-right: -70px;
@@ -408,12 +411,12 @@ main .restaurants article .new {
     left: 760px;
   }
   main .restaurants {
-    height: 470px;
+    height: 670px;
   }
   main .restaurants article {
-    width: 50%;
     height: 225px;
     margin: 20px 10px 50px 10px;
+    width: 225px;
   }
   main .restaurants article img {
     height: 165px;
@@ -423,6 +426,7 @@ main .restaurants article .new {
   }
   main .restaurants .flexRow {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 @media all and (min-width: 1025px) {

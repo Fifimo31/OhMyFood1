@@ -171,12 +171,13 @@ main {
                 }
             }
             .fonctionnement-size {
-                height: 262px;
+                height: 322px;
                 nav {
                     ul {
                         display: flex;
                         flex-direction: row;
                         position: absolute;
+                        flex-wrap: wrap;
                         .margin {
                             margin-right: -70px;
                             margin-left: -8px;
@@ -207,11 +208,11 @@ main {
             }
         }
         .restaurants {
-            height: 470px;
+            height: 670px;
             article {
-                width: 50%;
                 height: 225px;
                 margin: 20px 10px 50px 10px;
+                width: 225px;
                 img {
                     height: 165px;
                 }
@@ -221,6 +222,7 @@ main {
             }
             .flexRow {
                 display: flex;
+                flex-wrap: wrap;
             }
         }
     }

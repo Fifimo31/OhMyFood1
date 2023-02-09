@@ -111,12 +111,12 @@
 .utensils::before {
     font: var(--fa-font-solid);
     content: "\f2e7";
-    margin-right: 10px;
+    margin-right: 5px;
     }
 .handshake-angle::before {
     font: var(--fa-font-solid);
     content: "\f4c4";
-    margin-right: 10px;
+    margin-right: 5px;
   }
 .check1 {
     font: var(--fa-font-regular);
