@@ -261,12 +261,16 @@ main {
         }
         .restaurants {
             height: 550px;
+            article {
+                width: 300px; 
+            }
             h3 {
                 margin-left: 10%;
             }
             .flexRow {
                 display: flex;
                 margin-left: 10%;
+                flex-wrap: nowrap;
             }
         }
     }
